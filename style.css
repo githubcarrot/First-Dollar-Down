@@ -1,68 +1,114 @@
-body {
-  font-family: system-ui, sans-serif;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
-  background: #fafafa;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f9f9fb;
   color: #222;
+  line-height: 1.6;
 }
 
-header {
-  background: #0e1111;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* Layout */
 main {
-  padding: 40px 20px;
   max-width: 800px;
   margin: auto;
+  padding: 40px 20px;
+}
+header, footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
 }
 
+/* Header */
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: #eee;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #66d9ef;
+}
+
+/* Hero Section */
 .hero {
   text-align: center;
   margin-bottom: 40px;
 }
-
 .hero h2 {
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  color: #333;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 10px;
 }
 
-.posts h3 {
-  font-size: 1.4rem;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 10px;
+/* Posts List */
+.posts h2, .posts h3 {
+  margin-bottom: 20px;
+  color: #111;
 }
-
 .posts ul {
   list-style: none;
   padding-left: 0;
 }
-
 .posts li {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
-
 .posts a {
+  color: #0077cc;
+  font-size: 1.1rem;
   text-decoration: none;
-  color: #0066cc;
+  transition: all 0.2s ease;
 }
-
 .posts a:hover {
+  color: #005999;
   text-decoration: underline;
 }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 0.9rem;
-  color: #777;
+/* Article Content */
+article h2 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
 }
+article p {
+  margin-bottom: 20px;
+  color: #444;
+}
+article em {
+  color: #666;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  color: #aaa;
+  padding: 30px 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+  main {
+    padding: 20px 16px;
+  }
+}
+
